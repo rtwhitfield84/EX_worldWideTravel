@@ -1,16 +1,15 @@
 "use strict";
 
-Travel.controller('bookCtrl', function($scope,dataService) {
+Travel.controller('bookCtrl', function($scope,ItemStorage) {
 
-$scope.present = "You here?";
 $scope.guideBooks = [];
 
-var promise = dataService.getBooks();
-  promise.then(function(data) {
-
+ItemStorage.getBooks()
+.then(function(data) {
     $scope.guideBooks = data;
+    $scope.$apply();
+	console.log("data",data);
   });
-
 
 });
 

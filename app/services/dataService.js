@@ -1,15 +1,15 @@
-"use strict";
+// "use strict";
 
-Travel.service("dataService", function($http, $q) {
-  var deferred = $q.defer();
-  $http.get('data/guides.json').then(function(response) {
-    deferred.resolve(response.data);
-  });
+// Travel.service("dataService", function($http, $q) {
+//   var deferred = $q.defer();
+//   $http.get('data/guides.json').then(function(response) {
+//     deferred.resolve(response.data);
+//   });
 
-  this.getBooks = function() {
-    return deferred.promise;
-  };
-});
+//   this.getBooks = function() {
+//     return deferred.promise;
+//   };
+// });
 
 
 
