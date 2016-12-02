@@ -7,22 +7,20 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body ng-app="travelApp">
-  <div class="container" ng-controller="bookCtrl">
-    <div class="row">
-    <h1>{{ present }}</h1>
-      <div class="col-md-4" ng-repeat="guide in guideBooks.guides">
-        <h1>{{ guide.title }}</h1>
-        <h2>Type: {{ guide.type }}</h2>
-        <h4>$ {{ guide.price }}</h4>
-      </div>
-    </div>
-  </div>
+  <div ng-view></div>
   
+  <!-- providers -->
 <script type="text/javascript" src="lib/bower_components/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript" src="lib/bower_components/bootstrap/dist/js/bootstrap.min.js">
 </script>
+<script type="text/javascript" src="/lib/bower_components/angular-route/angular-route.min.js">
+</script>
+
+<!-- app -->
 <script type="text/javascript" src="app/app.js"></script>
+<!-- controllers -->
 <script type="text/javascript" src="app/controllers/bookCtrl.js"></script>
+<!-- factories -->
 <script type="text/javascript" src="app/factories/guideFactory.js"></script>
 
 <!-- <script type="text/javascript" src="app/services/dataService.js"></script> -->
